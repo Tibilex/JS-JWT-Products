@@ -9,16 +9,6 @@ body {
   background-color: #404244;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0 auto;
-  width: 1440px;
-  font-size: 16px;
-}
-
 h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -26,79 +16,56 @@ h3 {
   font-weight: 300;
 }
 
-.form__block {
+.imput__forgot {
+  color: #8fbc8f;
+  letter-spacing: 1px;
+  padding: 0 10px;
+}
+
+.container {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 1440px;
+  font-size: 16px;
+}
+
+.header__container {
   position: relative;
-  width: 400px;
-  height: 500px;
+  display: flex;
+  width: 1440px;
+  min-height: 60px;
+  padding: 10px;
   background-color: #242B33;
 }
 
-.input__block {
-  position: relative;
-  padding: 10px 10px;
+.form {
+  position: absolute;
+  top: 200px;
+  display: none;
+  z-index: 2;
+  width: 300px;
+  height: 400px;
+  background-color: #242B33;
 }
 
-.imput__check {
-  opacity: 0;
-  margin: 0 0 10px 0;
-  color: #d81d48;
-  letter-spacing: 1px;
+.form__position {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.imput__check._visible {
-  opacity: 1;
-}
-
-.imput__check._ok {
-  opacity: 1;
-  color: #8fbc8f;
-}
-
-.input {
-  width: 100%;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 0 10px;
-  outline: none;
-  border: 1px solid transparent;
-}
-
-.input::-moz-placeholder {
-  color: rgba(160, 161, 165, 0.9333333333);
-}
-
-.input:-ms-input-placeholder {
-  color: rgba(160, 161, 165, 0.9333333333);
-}
-
-.input::placeholder {
-  color: rgba(160, 161, 165, 0.9333333333);
-}
-
-.input._error {
-  box-shadow: 0 0 15px #d81d48;
-}
-
-.input__block p {
-  display: block;
-  color: #b3b3b3;
-  font-size: 14px;
-  margin: 0 0 4px 0;
-  letter-spacing: 2px;
-}
-
-.sign-up__button {
+.sign-in__button {
   position: relative;
   background: none;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 5px;
   transition: 0.4s;
-  min-height: 60px;
+  min-height: 50px;
   width: 180px;
   font-weight: 500;
   font-size: 16px;
@@ -110,11 +77,11 @@ h3 {
   cursor: pointer;
 }
 
-.sign-up__button:hover {
+.sign-in__button:hover {
   color: #242B33;
 }
 
-.sign-up__button::before {
+.sign-in__button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -127,45 +94,79 @@ h3 {
   z-index: -1;
 }
 
-.sign-up__button:hover::before {
+.sign-in__button:hover::before {
   width: 150%;
 }
 
+.input__block {
+  position: relative;
+  padding: 10px 10px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.input__block p {
+  display: block;
+  color: #b3b3b3;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  letter-spacing: 2px;
+}
+
 .login__block {
-  position: absolute;
-  bottom: 30px;
-  left: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.login__block.login__register {
-  left: 12%;
-}
-
-.login__back {
-  left: 40%;
+  flex-direction: column;
 }
 
 .login__text {
   color: #b3b3b3;
   letter-spacing: 1px;
+  padding: 0 0 10px 0;
 }
 
-.login__link {
-  margin: 0 0 0 5px;
+.login__button {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
   letter-spacing: 1px;
+  background: none;
+  border: none;
+  font-size: 16px;
   color: #8fbc8f;
 }
 
-a:hover {
+.login__button:hover {
   color: #fff;
   transition: 0.5s;
 }
 
-.imput__forgot {
+.title__block {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 0 0;
+}
+
+.close__form {
+  background: none;
+  border: none;
   color: #8fbc8f;
-  letter-spacing: 1px;
-  padding: 0 10px;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  top: 9px;
+  right: 18px;
+  transition: all 0.5s;
+}
+
+.close__form:hover {
+  color: #d81d48;
 }/*# sourceMappingURL=style.css.map */
